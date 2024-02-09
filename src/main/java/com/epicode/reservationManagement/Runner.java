@@ -59,9 +59,11 @@ public class Runner implements CommandLineRunner {
 
         postazioneService.filterByTipoAndCitta(Tipo.OPENSPACE, "Roma").forEach(System.out::println);
 
+
+        ///////////// SERVIZIO PRENOTAZIONI //////////
+
         prenotazioneService.faiPrenotazione(postazioneUno, LocalDate.now(), utenteUno);
         prenotazioneService.faiPrenotazione(postazioneTre, LocalDate.now(), utenteUno);
-
 
     }
 }

@@ -25,7 +25,7 @@ public class PrenotazioneService {
             prenotazioneDAO.save(prenotazione);
             log.info("Prenotazione avvenuta con successo");
         } else {
-            log.info("Errore prenotazione  non avvenuta posti terminati o hai gia una prenotato una postazione oggi riprova domani! ");
+            log.info("Errore prenotazione non avvenuta! Posti terminati o hai già  prenotato una postazione oggi riprova domani! ");
         }
     }
 
