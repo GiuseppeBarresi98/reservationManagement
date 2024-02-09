@@ -13,6 +13,8 @@ import java.util.List;
 @NoArgsConstructor
 @Setter
 @Getter
+
+
 public class Postazione {
     @Id
     @GeneratedValue
@@ -31,5 +33,17 @@ public class Postazione {
         this.tipo = tipo;
         this.capienza = capienza;
         this.edificio = edificio;
+
+    }
+
+    @Override
+    public String toString() {
+        return "Postazione{" +
+                "descrizione='" + descrizione + '\'' +
+                ", tipo=" + tipo +
+                ", capienza=" + capienza +
+                ", città dell'edificio=" + edificio.getCitta() +
+                ", list_prenotazioni=" +
+                '}';
     }
 }

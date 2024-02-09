@@ -5,7 +5,6 @@ import com.epicode.reservationManagement.DAO.PostazioneDAO;
 import com.epicode.reservationManagement.DAO.PrenotazioneDAO;
 import com.epicode.reservationManagement.Enum.Tipo;
 import com.epicode.reservationManagement.entities.Postazione;
-import com.epicode.reservationManagement.entities.Prenotazione;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,8 +24,8 @@ public class PostazioneService {
         log.info("Postazione salvato con successo!");
     }
 
-    public List<Prenotazione> filterByTipoAndCitta(Tipo tipo, String citta) {
-        List<Prenotazione> listaFiltrata = prenotazioneDAO.findByTipoECitta(tipo, citta);
+    public List<Postazione> filterByTipoAndCitta(Tipo tipo, String citta) {
+        List<Postazione> listaFiltrata = postazioneDAO.findByTipoAndEdificio_Citta(tipo, citta);
         return listaFiltrata;
     }
 }

@@ -21,6 +21,7 @@ public class Runner implements CommandLineRunner {
     @Autowired
     private EdificioService edificioService;
 
+
     @Override
     public void run(String... args) throws Exception {
 
@@ -37,17 +38,19 @@ public class Runner implements CommandLineRunner {
 
         /////////////////////////////////SALVATAGGI NEL DB ///////////////////////////////////////////////////
 
-        edificioService.saveEdificio(ufficio_manzoni);
-        edificioService.saveEdificio(palazzo_dei_congressi);
+//        edificioService.saveEdificio(ufficio_manzoni);
+//        edificioService.saveEdificio(palazzo_dei_congressi);
+//
+//        postazioneService.savePostazione(postazioneUno);
+//        postazioneService.savePostazione(postazioneDue);
+//
+//        utenteService.saveUtente(utenteUno);
+//        utenteService.saveUtente(utenteDue);
 
-        postazioneService.savePostazione(postazioneUno);
-        postazioneService.savePostazione(postazioneDue);
 
-        utenteService.saveUtente(utenteUno);
-        utenteService.saveUtente(utenteDue);
+        /////////////////////////////// RICERCA PER TIPO E CITTA /////////////
 
-
-        /////////////////////////////// RICERCA PER TIPO E CITTA
+        postazioneService.filterByTipoAndCitta(Tipo.OPENSPACE, "Roma").forEach(System.out::println);
 
 
     }
