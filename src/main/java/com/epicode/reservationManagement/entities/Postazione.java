@@ -42,8 +42,6 @@ public class Postazione {
                 "descrizione='" + descrizione + '\'' +
                 ", tipo=" + tipo +
                 ", capienza=" + capienza +
-                ", città dell'edificio=" + edificio.getCitta() +
-                ", list_prenotazioni=" +
-                '}';
+                ", città dell'edificio=" + edificio.getCitta();
     }
 }

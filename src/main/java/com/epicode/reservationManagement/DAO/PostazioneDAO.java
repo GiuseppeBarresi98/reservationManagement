@@ -10,6 +10,7 @@ import java.util.List;
 
 @Repository
 public interface PostazioneDAO extends JpaRepository<Postazione, Long> {
-
     List<Postazione> findByTipoAndEdificio_Citta(Tipo tipo, String citta);
+
+    
 }
